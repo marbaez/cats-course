@@ -23,7 +23,7 @@ object MonadTransformersMine {
   import cats.instances.future._
   val listOfEither: EitherT[List, String, Int] = EitherT(List(Left("somthing went wrong"), Right(42)))
   implicit val ec: ExecutionContext = ExecutionContext.fromExecutorService(Executors.newFixedThreadPool(8))
-  val futureOfEither: EitherT[Future, String, Int] = EitherT(Future(Right(45)))
+  //val futureOfEither: EitherT[Future, String, Int] = EitherT(Future(Right(45)))
 
   /*
   TODO exercise:
